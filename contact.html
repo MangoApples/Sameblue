@@ -4,93 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Japanese Culture</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head> 
-<body bgcolor="#F0F0F0">
+<body>
 
-    <!-- Main Table for Layout -->
-    <table width="900" align="center" border="0" cellspacing="0" cellpadding="10" bgcolor="white">
+    <div class="container main-container">
         
         <!-- === BANNER === -->
-        <tr>
-            <td>
-                <img src="Gambar/japanese culture banner.jpg" width="880" alt="Banner Japanese Culture">
-            </td>
-        </tr>
+        <div class="row">
+            <div class="col-12 text-center p-0">
+                <img src="Gambar/japanese culture banner.jpg" class="img-fluid w-100" alt="Banner Japanese Culture">
+            </div>
+        </div>
 
-        <!-- === Hyperlink === -->
-        <tr>
-            <td bgcolor="#333333" align="center">
-                <font color="white" face="Verdana" size="3">
-                    <b>
-                        <a href="index.html"><font color="white">HOME</font></a> |
-                        <a href="gallery.html"><font color="white">GALLERY</font></a> |
-                        <a href="contact.html"><font color="white">CONTACT</font></a> |
-                        <a href="about.html"><font color="white">ABOUT</font></a>
-                    </b>
-                </font>
-            </td>
-        </tr>
+        <!-- === NAVBAR === -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
+            <div class="container-fluid justify-content-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">GALLERY</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <!-- === Form === -->
-        <tr>
-            <td align="center">
-                <font face="Verdana" size="5" color="black"><b>Hubungi Kami</b></font>
-                <hr width="50%">
-                <p><font face="Arial" size="3">Silakan isi formulir di bawah ini untuk mengirimkan pertanyaan atau masukan Anda.</font></p>
-                <br>
+        <!-- === CONTENT === -->
+        <div class="p-5">
+            <h2 class="text-center fw-bold mb-3">Hubungi Kami</h2>
+            <hr class="w-50 mx-auto mb-4">
+            <p class="text-center mb-5">Silakan isi formulir di bawah ini untuk mengirimkan pertanyaan atau masukan Anda.</p>
 
-                <form action="#" method="post">
-                    <table border="0" cellpadding="8" bgcolor="#EAEAEA">
-                        <tr>
-                            <td><font face="Verdana" size="2">Nama Lengkap</font></td>
-                            <td>:</td>
-                            <td><input type="text" name="nama" size="40" placeholder="Masukkan nama Anda"></td>
-                        </tr>
-                        <tr>
-                            <td><font face="Verdana" size="2">Email</font></td>
-                            <td>:</td>
-                            <td><input type="text" name="email" size="40" placeholder="Masukkan email Anda"></td>
-                        </tr>
-                        <tr>
-                            <td><font face="Verdana" size="2">Subjek</font></td>
-                            <td>:</td>
-                            <td>
-                                <select name="topik" width: 100%;>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card bg-light border-0 p-4">
+                        <form action="#" method="post">
+                            <div class="mb-3">
+                                <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda">
+                            </div>
+                            <div class="mb-3">
+                                <label for="topik" class="form-label fw-bold">Subjek</label>
+                                <select class="form-select" id="topik" name="topik">
                                     <option value="tanya">Pertanyaan Umum</option>
                                     <option value="saran">Saran & Masukan</option>
                                     <option value="kerjasama">Kerja Sama</option>
-                                
                                 </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top"><font face="Verdana" size="2">Pesan Anda</font></td>
-                            <td valign="top">:</td>
-                            <td><textarea name="pesan" cols="42" rows="8" placeholder="Tulis pesan Anda di sini..."></textarea></td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" align="center">
-                                <br>
-                                <input type="submit" value="Kirim Pesan">
-                                <input type="reset" value="Ulangi">
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-
-            </td>
-        </tr>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label fw-bold">Pesan Anda</label>
+                                <textarea class="form-control" id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                                <button type="submit" class="btn btn-primary px-4">Kirim Pesan</button>
+                                <button type="reset" class="btn btn-secondary px-4">Ulangi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- === FOOTER === -->
-        <tr bgcolor="#333333">
-            <td align="center" height="50">
-                <font color="white" face="Arial" size="2"> 
-                    &copy; Copyright Muhammad Daffa Putra Yang - 251011700973 - 01SIFP016 - 2025
-                </font>
-            </td>
-        </tr>
+        <footer class="text-center">
+            <small>&copy; Copyright Muhammad Daffa Putra Yang - 251011700973 - 01SIFP016 - 2025</small>
+        </footer>
 
-    </table>
+    </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+body {
+    background-color: #F0F0F0;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+}
+
+/* Mengatur font heading sesuai desain asli */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .btn {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Container utama menggantikan table width="900" */
+.main-container {
+    background-color: white;
+    max-width: 900px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+.bg-custom-dark {
+    background-color: #333333 !important;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Helper untuk text justify */
+.text-justify {
+    text-align: justify;
+}
